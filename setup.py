@@ -10,13 +10,13 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-jpush',
     version='0.1',
-    # packages=find_packages(),
-    packages=['djpush', ],
+    packages=find_packages(),
+    # packages=['djpush',],
     include_package_data=True,
     license='BSD License',  # example license
     description='django jpush',
     long_description=README,
-    url='https://github.com/ChainNewsYan/django-jpush',
+    url='https://github.com/Bit03/django-jpush',
     author='Y4n',
     author_email='',
     classifiers=[
