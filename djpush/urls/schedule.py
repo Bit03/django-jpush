@@ -1,9 +1,8 @@
 from django.conf.urls import url
+
 from djpush.views.schedule_api import (
     ScheduleAPIView,
     ScheduleDeleteAPIView,
-    ScheduleGetAPIView,
-    ScheduleListAPIView,
 )
 
 urlpatterns = [
