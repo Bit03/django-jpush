@@ -9,7 +9,7 @@ from djpush.djpush.zone import DJPushZone
 class ZoneDefaultAPIView(APIView, DJPushZone):
     def post(self):
         _data = self.request.DATA
-        alert = _data.get('alert')
+        alert = _data.get("alert")
         push = self.my_push
         push.audience = jpush.all_
         push.notification = jpush.notification(alert=alert)
@@ -28,10 +28,9 @@ class ZoneDefaultAPIView(APIView, DJPushZone):
 
 
 class ZoneBJAPIView(APIView, DJPushZone):
-
     def post(self):
         _data = self.request.DATA
-        alert = _data.get('alert')
+        alert = _data.get("alert")
         push = self.my_push
         push.audience = jpush.all_
         push.notification = jpush.notification(alert=alert)

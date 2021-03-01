@@ -5,7 +5,6 @@ from djpush.djpush.basic import DJPushBasicClass
 
 
 class DJPushZone(DJPushBasicClass):
-
     def default(self):
         push = self.my_push
         push.audience = jpush.all_

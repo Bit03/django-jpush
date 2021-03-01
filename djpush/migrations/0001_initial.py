@@ -17,16 +17,37 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='JiGuangReg',
+            name="JiGuangReg",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('regid', models.CharField(max_length=24, verbose_name='RegID')),
-                ('is_push', models.BooleanField(default=True, verbose_name='Is Push')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='User')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "regid",
+                    models.CharField(max_length=24, verbose_name="RegID"),
+                ),
+                (
+                    "is_push",
+                    models.BooleanField(default=True, verbose_name="Is Push"),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                        verbose_name="User",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Ji Guang Reg id',
-                'verbose_name_plural': 'Ji Guang Reg id',
+                "verbose_name": "Ji Guang Reg id",
+                "verbose_name_plural": "Ji Guang Reg id",
             },
         ),
     ]

@@ -8,4 +8,6 @@ class RegisterAPIView(CreateAPIView):
     model = JiGuangReg
     queryset = JiGuangReg.objects.all()
     serializer_class = RegisterCreateSerializer
-    permission_classes = [IsAuthenticated, ]
+    permission_classes = [
+        IsAuthenticated,
+    ]

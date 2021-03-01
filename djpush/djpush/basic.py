@@ -6,16 +6,18 @@ from requests import RequestException
 
 class DJPushBasicClass(object):
     def __init__(self, fail_silently=False, *args, **kwargs):
-        dev_key = kwargs.pop('dev_key', None)
-        dev_secret = kwargs.pop('dev_secret', None)
-        app_key = kwargs.pop('app_key', None)
-        master_secret = kwargs.pop('master_secret', None)
+        dev_key = kwargs.pop("dev_key", None)
+        dev_secret = kwargs.pop("dev_secret", None)
+        app_key = kwargs.pop("app_key", None)
+        master_secret = kwargs.pop("master_secret", None)
         self.fail_silently = fail_silently
         try:
-            self._dev_key = dev_key or getattr(settings, 'DEV_KEY')
-            self._dev_secret = dev_secret or getattr(settings, 'DEV_SECRET')
-            self._app_key = app_key or getattr(settings, 'APP_KEY')
-            self._master_secret = master_secret or getattr(settings, 'MASTER_SECRET')
+            self._dev_key = dev_key or getattr(settings, "DEV_KEY")
+            self._dev_secret = dev_secret or getattr(settings, "DEV_SECRET")
+            self._app_key = app_key or getattr(settings, "APP_KEY")
+            self._master_secret = master_secret or getattr(
+                settings, "MASTER_SECRET"
+            )
         except AttributeError:
             if self.fail_silently:
                 self._dev_user = None

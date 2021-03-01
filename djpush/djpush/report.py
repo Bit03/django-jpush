@@ -9,4 +9,6 @@ class DJPushReport(DJPushBasicClass):
         return self.my_report.get_received(msg_ids=msg_ids)
 
     def users(self, time_unit="DAY", start="2018-04-13", duration="3650"):
-        return self.my_report.get_users(time_unit=time_unit, start=start, duration=duration)
+        return self.my_report.get_users(
+            time_unit=time_unit, start=start, duration=duration
+        )
