@@ -1,4 +1,5 @@
-from django.conf.urls import url
+# from django.conf.urls import url
+from django.urls import path
 
 from djpush.views.schedule_api import (
     ScheduleAPIView,
@@ -6,8 +7,8 @@ from djpush.views.schedule_api import (
 )
 
 urlpatterns = [
-    url(r"^$", ScheduleAPIView.as_view(), name="default"),
-    url(r"^delete/?$", ScheduleDeleteAPIView.as_view(), name="delete"),
-    url(r"^get/?$", ScheduleDeleteAPIView.as_view(), name="get"),
-    url(r"^list/?$", ScheduleDeleteAPIView.as_view(), name="list"),
+    path("", ScheduleAPIView.as_view(), name="default"),
+    path("delete/", ScheduleDeleteAPIView.as_view(), name="delete"),
+    path("get/", ScheduleDeleteAPIView.as_view(), name="get"),
+    path("list/", ScheduleDeleteAPIView.as_view(), name="list"),
 ]
