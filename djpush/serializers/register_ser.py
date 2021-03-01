@@ -8,4 +8,6 @@ class RegisterCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = JiGuangReg
-        exclude = ("id",)
+        exclude = [
+            "id",
+        ]
